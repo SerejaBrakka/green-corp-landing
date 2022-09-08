@@ -9,6 +9,10 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 1;
 }
 
 .header__logo {
@@ -34,23 +38,34 @@ button {
   cursor: pointer;
   box-shadow: 0 16px 36px rgb(52 213 68 / 22%);
   padding: 15px;
-  transition: background-color 0.3s ease-in;
 }
 
 .about__sun-image {
   width: 100px;
   height: 100px;
+  animation: rotation 10s infinite linear;
+  position: absolute;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }
 .about__image {
   width: 500px;
 }
+
 .about {
   display: flex;
   justify-content: space-around;
   align-items: center;
   padding-top: 115px;
   padding-bottom: 115px;
-  background: url(/img/back.png) no-repeat;
+  background: url(img/back.png) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -117,6 +132,7 @@ button {
   height: 60px;
   padding: 0 20px;
   border-radius: 15px;
+  border: none;
 }
 .form__submit {
   font-size: 18px;
@@ -132,9 +148,10 @@ input {
 button:hover {
   background-color: #f6980c;
   box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
+  transition: background-color 0.3s ease-in;
 }
 footer {
-  padding: 90px 0;
+  padding: 90px 20px;
   font-size: 16px;
   font-weight: 600;
 }
@@ -162,4 +179,64 @@ footer {
 .footer__links {
   display: flex;
   flex-direction: column;
+}
+
+@media (max-width: 720px) {
+  .header__logo {
+    height: 20px;
+  }
+  header {
+    padding: 10px;
+  }
+  .header a {
+    margin-right: 10px;
+  }
+  .about {
+    flex-direction: column-reverse;
+    padding: 50px 10px;
+  }
+  .form {
+    padding: 50px 10px;
+  }
+  footer {
+    padding: 50px 10px;
+  }
+  .about h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__image {
+    width: 280px;
+  }
+  .about__sun-image {
+    width: 75px;
+    height: 75px;
+  }
+  .footer__container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media (max-width: 1024px) {
+  .about h1 {
+    font-size: 36px;
+    line-height: 40px;
+  }
+  .about__image {
+    width: 280px;
+  }
+  .about__sun-image {
+    width: 75px;
+    height: 75px;
+  }
+
+  .about {
+    padding: 115px 20px;
+  }
+  header {
+    padding: 20px;
+  }
+  .form {
+    padding: 115px 20px;
+  }
 }
