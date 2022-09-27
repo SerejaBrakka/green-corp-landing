@@ -65,7 +65,7 @@ button {
   align-items: center;
   padding-top: 115px;
   padding-bottom: 115px;
-  background: url(img/back.png) no-repeat;
+  background: url(./img/back.png) no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -266,7 +266,7 @@ footer {
 }
 
 .promo__image {
-  background: url("./img/promo.jpg");
+  background: url(./img/promo.jpg);
   background-size: cover;
   flex-shrink: 0;
   width: 50%;
@@ -295,13 +295,21 @@ footer {
   color: #ec6b29;
   font-size: 10px;
 }
+
 .promo__right__btn button {
   background-color: #107b1c;
   margin-top: 20px;
-  font-size: 18px;
-  padding: 15px 30px;
   font-weight: 600;
+  font-size: 18px;
+  box-shadow: 0 16px 36px rgb(16 122 28 / 30%);
+  padding: 15px 30px;
 }
+.promo__right__btn button:hover {
+  background-color: #f6980c;
+  box-shadow: 0 16px 36px rgba(246 152 12 / 20%);
+  transition: background-color 0.3s ease-in;
+}
+
 .fa-chevron-right {
   font-size: 15px;
   margin-left: 5px;
@@ -313,6 +321,9 @@ footer {
 }
 
 @media (max-width: 720px) {
+  .about {
+    overflow-x: hidden;
+  }
   .header__logo {
     height: 20px;
   }
@@ -403,6 +414,7 @@ footer {
   }
   .about {
     padding: 115px 20px;
+    overflow-x: hidden;
   }
   header {
     padding: 20px;
