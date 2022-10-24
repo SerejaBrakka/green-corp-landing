@@ -8,3 +8,4 @@
 тип устройства и подставлять указанные значения в автоматическом режиме.
 
 Использются open-source библиотеки : Font Awesome - для редактирования шрифта и иконок , Animate - инструмент для добавления анимаций.
+[Солнечные батареи GreenCorp.pdf](https://github.com/SerejaBrakka/green-corp-landing/files/9702320/GreenCorp.pdf)
