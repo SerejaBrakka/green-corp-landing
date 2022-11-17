@@ -18,7 +18,7 @@
     <header>
       <img class="header__logo" src="img/logo.svg" />
       <div class="header__controls">
-        <a href="#contacts">Контакты</a>
+        <a href="#form">Контакты</a>
         <button>Заказать</button>
       </div>
     </header>
@@ -33,7 +33,7 @@
           Производите дешёвую экологически чистую электроэнергию из солнечного
           света
         </p>
-        <button>
+        <button class="more-button" href="#features">
           Узнать подробнее
           <i class="fa-solid fa-angle-right"></i>
         </button>
@@ -82,8 +82,10 @@
       <div class="features__feedback">
         <div class="features__feedback-left">
           <h2>
-            Нам доверяет <br />
-            5000+ счастливых клиентов
+            Нам доверяет
+            <br />
+            <div class="features__clients-count">5000+</div>
+            счастливых клиентов
           </h2>
           <p>
             Мы помогли тысячам людей перейти на зеленую энергию.
@@ -138,7 +140,7 @@
       </div>
     </section>
 
-    <section class="form">
+    <section class="form" id="form">
       <div class="form__container">
         <h1>Оставьте свои контакты</h1>
         <p>
@@ -169,9 +171,10 @@
               <option value="10-30">10 000₽ – 30 000₽</option>
               <option value="30-60">30 000₽ – 60 000₽</option>
               <option value="60-100">60 000₽ – 100 000₽</option>
-              <option value="100">100 000₽</option>
+              <option value="other">Другое</option>
             </select>
           </div>
+
           <button class="form__submit" type="submit">Отправить заявку</button>
         </form>
       </div>
@@ -203,5 +206,6 @@
       <div class="footer__copyright">GreenCorp © 2021</div>
     </footer>
     <script src="./js/canvas.js"></script>
+    <script src="./js/animation.js"></script>
   </body>
 </html>
